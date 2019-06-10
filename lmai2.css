@@ -145,15 +145,107 @@ b{
     text-align: center;
 }
 #myBtn{
-  text-align: center;
-}
-.line{
-    height: 50px;
-    width: 100%;
-    color: white;
-}
-.line1{
-    height: 400px;
-    width: 100%;
-    color: white;
-}
+    text-align: center;
+  }
+  .line{
+      height: 50px;
+      width: 100%;
+      color: white;
+  }
+  .line1{
+      height: 400px;
+      width: 100%;
+      color: white;
+  }
+  .line2{
+      height: 400px;
+      width: 100%;
+      color: white;
+  }
+  #dots{
+      color: blue;
+  }
+  .nasi img{
+      width: 400px;
+      height: 300px;
+      text-align: center;
+  }
+  .nasi h1{
+      position: relative;
+  }
+  .hai{
+      text: bold;
+      
+  }
+  button{
+      opacity:0.5;
+     
+  }
+  button:hover{
+      opacity: 1;
+      
+  }
+  .todo {
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%; 
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+    .s {
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%; 
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+    .q, .a, p, h1{
+      animation-duration: 3s;
+      animation-name: slidein;
+    }
+    
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%; 
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+    .ss{
+      font-size: 70px;
+      text-align: center;
+      color: white;
+    }
+    .line2{
+      width: 100%;
+      height: 200px;
+      color: white;
+    }
+    .hanif{
+      width: 100%;
+      height: 500px;
+      background: #444;
+    }
+    
