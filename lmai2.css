@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+    
+  }
+
+  .hero{
+      background-image: linear-gradient(#808080,#e2e2e2e2);
+  }
+  .top-bar{
+      padding: 40px;
+  }
+  .caption{
+      color: white;
+  }
+  .top-button{
+      float: right;
+  }
+  .top-button a{
+      margin: 0 8px;
+      padding: 8px 20px;
+      color: #302ae6;
+      text-decoration: none !important;
+      border: none;
+  }
+  .login-btn{
+      background: transparent !important;
+      color: #fff !important;
+  }
+  .top-button a:hover{
+      background: #fff;
+  }
+  .hero h1{
+      color: #fff;
+      font-size: 70px;
+      font-weight: bold;
+      margin-top: 12%;
+      initial-letter: 3px;
+  }
+  .hero p{
+      color: #fff;
+  }
+  .hero, .container{
+      margin-top: px;
+  }
+  .start-btn{
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      width: 140px;
+      height: 40px;
+      margin-top: 50px;
+      border-radius: 50px;
+  }
+  .home-img img{
+    width: 125%;
+    min-width: 350px;
+    margin-top: 10px;
+  }
+  .infuluencres{
+      padding: 30px 0;
+      background: #efefef;
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #565656;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #e3e3e3;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+ ul.todo li {
+        width: 40%;
+        min-height: 50px;
+        float: left;
+        font-size: 14px;
+        font-weight: 500;
+        color: #444;
+        line-height: 22px;
+        background: #fff;
+        border-radius: 5px;
+        position: relative;
+        box-shadow: 8px 2px 4px rgba(44, 52, 80, 0.15);
+        margin: 0 0 10px 0;
+        padding: 14px 100px 14px 14px;
+}
+
+ul.tdo1 li {
+    width: 40%;
+    min-height: 50px;
+    right: 150px;
+    top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 8px 2px 4px rgba(44, 52, 80, 0.15);
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+}
+b{
+    text-align: center;
+}
+.q{
+    text-align: center;
+    top: 10px;
+}
+.l{
+    text-align: center;
+}
+.a{
+    text-align: center;
+}
+#myBtn{
+  text-align: center;
+}
+.line{
+    height: 50px;
+    width: 100%;
+    color: white;
+}
+.line1{
+    height: 400px;
+    width: 100%;
+    color: white;
+}
