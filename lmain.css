@@ -2,15 +2,20 @@
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
-    
   }
 
-
-  .hero{
-      background-image: linear-gradient(#808080,#e2e2e2e2);
+body{
+   background: #e5e5e5;
+}
+  .hero1{
+      background: #444;
+      height: 50px;
+      z-index:1000;
+      position: fixed;
+      width: 100%;
   }
   .top-bar{
-      padding: 40px;
+      padding: 30px;
   }
   .caption{
       color: white;
@@ -233,5 +238,20 @@ button:hover{
       margin-left: 0%;
       width: 100%;
     }
+  }
+  .ss{
+    font-size: 70px;
+    text-align: center;
+    color: white;
+  }
+  .line2{
+    width: 100%;
+    height: 200px;
+    color: white;
+  }
+  .hanif{
+    width: 100%;
+    height: 500px;
+    background: #444;
   }
   
