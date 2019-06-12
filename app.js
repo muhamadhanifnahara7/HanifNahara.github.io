@@ -23,7 +23,7 @@ function myFunction() {
   }
   function myBtn(){
      if(confirm("Do you want to ask")){
-          Ok: window.open("https://mail.google.com/mail/u/0/#inbox?compose=new");
+          Ok: window.open("https://mail.google.com/mail/u/0/#inbox?compose=new")
         }    
      }
   
