@@ -112,8 +112,8 @@ img body{
     .sidenav a {font-size: 18px;}
   }
  ul.todo li {
-        width: 40% !important;
-        min-height: 50px !important;
+        width: 40% ;
+        min-height: 50px ;
         float: right;
         font-size: 14px;
         font-weight: 500;
@@ -129,8 +129,8 @@ img body{
 }
 
 ul.todo1 li {
-    width: 500px !important;
-    min-height: 50px !important;
+    width: 500px ;
+    min-height: 50px ;
     right: -400px;
     top: -10px;
     font-size: 14px;
@@ -168,13 +168,13 @@ b{
     color: white;
 }
 .line1{
-    height: 400px !important;
-    width: 100% !important;
+    height: 400px ;
+    width: 100%;
     color: white;
 }
 .line2{
-    height: 400px !important;
-    width: 100% !important;
+    height: 400px ;
+    width: 100% ;
     color: white;
 }
 #dots{
