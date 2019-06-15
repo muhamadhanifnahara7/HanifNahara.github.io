@@ -36,12 +36,12 @@ img body{
       margin: 0 8px;
       padding: 8px 20px;
       color: #302ae6;
-      text-decoration: none !important;
+      text-decoration: none;
       border: none;
   }
   .login-btn{
       background: transparent !important;
-      color: #fff !important;
+      color: #fff ;
   }
   .top-button a:hover{
       background: #fff;
