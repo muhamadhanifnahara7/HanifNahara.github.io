@@ -10,8 +10,8 @@ body{
   background-repeat: no-repeat;
 }
 img body{
-  width: 100% !importat;
-  height: 100% !importat;
+  width: 100% !important;
+  height: 100% !important;
 }
   .hero1{
       background: #444;
