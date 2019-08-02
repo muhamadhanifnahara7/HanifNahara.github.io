@@ -2,14 +2,25 @@
     margin: 0;
     padding: 0;
     font-family: "Lato", sans-serif;
-    
   }
 
-  .hero{
-      background-image: linear-gradient(#4e58b6,#8d9fdbe2);
+body{
+  background-image: url("./255243.jpg" );
+  
+}
+img body{
+  width: 100% ;
+  height: 100%;
+}
+  .hero1{
+      background: #444;
+      height: 50px;
+      z-index:1000;
+      position: fixed;
+      width: 100%;
   }
   .top-bar{
-      padding: 40px;
+      padding: 50px;
   }
   .caption{
       color: white;
@@ -21,12 +32,12 @@
       margin: 0 8px;
       padding: 8px 20px;
       color: #302ae6;
-      text-decoration: none !important;
+      text-decoration: none;
       border: none;
   }
   .login-btn{
-      background: transparent !important;
-      color: #fff !important;
+      background: transparent ;
+      color: #fff ;
   }
   .top-button a:hover{
       background: #fff;
@@ -37,6 +48,7 @@
       font-weight: bold;
       margin-top: 12%;
       initial-letter: 3px;
+      box-shadow: 8px 2px 4px rgba(44, 52, 80, 0.15);
   }
   .hero p{
       color: #fff;
@@ -100,11 +112,12 @@
     .sidenav a {font-size: 18px;}
   }
  ul.todo li {
-        width: 40%;
-        min-height: 50px;
-        float: left;
+        width: 40% ;
+        min-height: 50px ;
+        float: right;
         font-size: 14px;
         font-weight: 500;
+        color: #444;
         line-height: 22px;
         background: #fff;
         border-radius: 5px;
@@ -112,20 +125,12 @@
         box-shadow: 8px 2px 4px rgba(44, 52, 80, 0.15);
         margin: 0 0 10px 0;
         padding: 14px 100px 14px 14px;
-       
-            cursor: pointer;
-            transition: 0.4s;
-          }
-          ul.todo li:hover {
-            transform: scale(0.9, 0.9);
-            box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-              -5px -5px 30px 15px rgba(0,0,0,0.22);
-          }
-
+        background: #444;
+}
 
 ul.todo1 li {
-    width: 40%;
-    min-height: 50px;
+    width: 500px ;
+    min-height: 50px ;
     right: -400px;
     top: -10px;
     font-size: 14px;
@@ -138,6 +143,8 @@ ul.todo1 li {
     box-shadow: 8px 2px 4px rgba(44, 52, 80, 0.15);
     margin: 0 0 10px 0;
     padding: 14px 100px 14px 14px;
+    text-align: center;
+    text-align: left;
 }
 b{
     text-align: center;
@@ -152,6 +159,9 @@ b{
 .a{
     text-align: center;
 }
+.r{
+    color: white;
+}
 #myBtn{
   text-align: center;
 }
@@ -161,26 +171,161 @@ b{
     color: white;
 }
 .line1{
-    height: 400px;
+    height: 400px ;
     width: 100%;
     color: white;
 }
-.slidein {
+.line2{
+    height: 400px ;
+    width: 100% ;
+    color: white;
+}
+#dots{
+    color: blue;
+}
+.nasi img{
+    width: 400px;
+    height: 300px;
+    text-align: center;
+}
+.nasi h1{
+    position: relative;
+}
+.hai{
+    flex: bold;
+    
+}
+button{
+    opacity:0.5;
+   
+}
+button:hover{
+    opacity: 1;
+    
+}
+.todo {
     animation-duration: 3s;
     animation-name: slidein;
-    animation-iteration-count: 3;
-    animation-direction: alternate;
   }
   
   @keyframes slidein {
     from {
-      margin-left:100%;
-      width:300%
+      margin-left: 100%;
+      width: 300%; 
     }
-    
+  
     to {
-      margin-left:0%;
-      width:100%;
+      margin-left: 0%;
+      width: 100%;
     }
   }
- 
+  .s {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  .q, .a, p, h1{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  .ss{
+    font-size: 70px;
+    text-align: center;
+    color: white;
+  }
+  .line2{
+    width: 100%;
+    height: 200px;
+    color: white;
+  }
+  .hanif{
+    width: 100%;
+    height: 10000;
+    background: transparent;
+  }
+
+.b, .q, .l, .a{
+  color: white;
+  
+}
+.about{
+   width: 100%;
+   height: 1100px;
+   background: #f1f1f1;
+}
+.text-about{
+ text-align: center;
+}
+.block{
+  width: 100%;
+  height: 2px;
+  background: #444;
+  text-align: center;
+}
+html {
+  scroll-behavior: smooth;
+}
+.we{
+  color: #fff;
+  float: left;
+}
+.bi{
+  float: right;
+}
+#down {
+  margin-top: 100%;
+  padding-bottom: 25%;
+ } 
+ .animated {
+  -webkit-animation-duration: 2.5s;
+  animation-duration: 2.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+} 
+
+@-webkit-keyframes bounce {
+  0%, 20%, 40%, 60%, 80%, 100% {-webkit-transform: translateY(0);}
+  50% {-webkit-transform: translateY(-5px);}
+} 
+
+@keyframes bounce { 
+  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-5px);}
+} 
+
+.bounce { 
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+}
+
+span {
+    position: relative;
+    color: white;
+}
