@@ -202,10 +202,11 @@ b{
       zoom: 120%;
     }
     .hero1{
-      height: 70px;
+      height: 60px;
     }
     span {
-      zoom: 150%;
+      zoom: 160%;
+      top: -7px;
     }
   }
   #slider-wrapper {
