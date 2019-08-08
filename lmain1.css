@@ -197,6 +197,15 @@ b{
        display: block;
        width: 100%;
     }
+    body{
+      zoom: 120%;
+    }
+    .hero1{
+      height: 80px;
+    }
+    span {
+      zoom: 150%;
+    }
   }
   #slider-wrapper {
     width: 940px;
