@@ -187,11 +187,12 @@ b{
     .wa {
       display: block;
       width: 80%;
+      height: 30%;
      
     }
     img {
       display: inherit;
-      width: 60%;
+      width: 70%;
     }
     ul.todo li{
        display: block;
@@ -201,7 +202,7 @@ b{
       zoom: 120%;
     }
     .hero1{
-      height: 80px;
+      height: 70px;
     }
     span {
       zoom: 150%;
