@@ -199,7 +199,7 @@ b{
        width: 100%;
     }
     body{
-      zoom: 130%;
+      zoom: 150%;
     }
     .hero1{
       height: 60px;
@@ -518,7 +518,7 @@ b{
 
 .user-profile {
   margin: auto;
-	width: 25em; 
+	width: 20em; 
   height: 260px;
   background: #fff;
   border-radius: .3em;
