@@ -206,7 +206,7 @@ b{
     }
     p {
       zoom: 100%;
-
+        size: 40px;
     }
     ul.todo1 li{
       display: block;
