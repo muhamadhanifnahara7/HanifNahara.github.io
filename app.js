@@ -50,4 +50,12 @@ function myFunction() {
        document.getElementById("output").appendChild(l);
      }
      
+ function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+     
+    
  
+var buttons = document.getElementById("myBtn_up");
+    buttons.innerHTML = '<img src="/arrow-up.png" />';
