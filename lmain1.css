@@ -200,13 +200,14 @@ b{
     }
     body{
       zoom: 120%;
+    
     }
     .hero1{
       height: 60px;
     }
     p {
       zoom: 100%;
-        size: 40px;
+      size: 40px;
     }
     ul.todo1 li{
       display: block;
@@ -640,12 +641,17 @@ b{
     transform: translateY(-5px);
   }
 }
+
 #myBtn_up{
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
   width: 50px;
   height: 50px;
-  position: relative;
-  right: -140px;
-  bottom: -50px;
   border-radius: 50%;
-  background: #fff;
+ background: #fff;
+}
+.arrow{
+  left: 7px;
+  position: relative;
 }
