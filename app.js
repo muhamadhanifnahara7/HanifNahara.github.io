@@ -60,4 +60,4 @@ function myFunction() {
 var buttons = document.getElementById("myBtn_up");
     buttons.innerHTML = '<img src="/arrow-up.png" />';
 
-var cart = [] ;  var Item = function(name,  price, count) {   this.name = name;    this.price = price;   this.count= count; }  function addItemToCart(count) {    for(var i in cart){       if(cart[i].count += count) {                return;       }     }    var item = new  Item(count);    cart.push(item); }    function lol() { addItemToCart(1); document.getElementById("wrap").innerHTML = cart[0].count;  }
+
