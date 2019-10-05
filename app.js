@@ -57,7 +57,5 @@ function myFunction() {
      
     
  
-var buttons = document.getElementById("myBtn_up");
-    buttons.innerHTML = '<img src="/arrow-up.png" />';
 
 
