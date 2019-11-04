@@ -54,7 +54,10 @@ function myFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-     
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3392359402219343",
+    enable_page_level_ads: true
+  });
     
  
 
