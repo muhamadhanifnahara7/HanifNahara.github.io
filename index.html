@@ -97,7 +97,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 6px solid rgba(255,255,255,0.2);
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             box-shadow: 0 0 20px rgba(0,0,0,0.2);
         }
 
@@ -271,6 +271,80 @@
             margin-bottom: 30px;
             color: #555;
         }
+
+        /* Video section styling */
+        #video-project .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        #video-project .video-container iframe,
+        #video-project .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .portfolio-image {
+            width: 100%;
+            max-width: 600px; /* Batasi lebar maksimum agar tidak terlalu besar */
+            height: auto;
+            display: block; /* Menghapus spasi ekstra di bawah gambar */
+            margin: 0 auto; /* Tengah-tengah gambar di dalam container */
+            border-radius: 10px; /* Sudut membulat */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus untuk efek hover */
+        }
+
+/*
+ * Efek Hover untuk Gambar Portofolio
+ * Gambar akan membesar sedikit dan bayangan akan menjadi lebih jelas saat kursor diarahkan.
+ */
+        .portfolio-image:hover {
+            transform: scale(1.02); /* Memperbesar gambar 2% */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas */
+        }
+
+/*
+ * Gaya untuk Galeri Gambar
+ * Untuk tampilan seperti galeri dengan beberapa gambar dalam satu baris.
+ */
+        .gallery-image {
+            width: 100%;
+            height: 250px; /* Tinggi tetap untuk tampilan seragam */
+            object-fit: cover; /* Memastikan gambar memenuhi ruang tanpa terdistorsi */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: translateY(-5px); /* Menggeser gambar sedikit ke atas saat dihover */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+/*
+ * Contoh Penggunaan
+ * Berikut adalah contoh HTML untuk menerapkan gaya di atas:
+ *
+ * <img src="path/to/your-image.jpg" class="portfolio-image" alt="Deskripsi gambar">
+ *
+ * <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+ * <img src="path/to/image1.jpg" class="gallery-image" alt="Deskripsi gambar 1">
+ * <img src="path/to/image2.jpg" class="gallery-image" alt="Deskripsi gambar 2">
+ * <img src="path/to/image3.jpg" class="gallery-image" alt="Deskripsi gambar 3">
+ * </div>
+ *
+ * <img src="path/to/profile.jpg" class="profile-image-circle" alt="Foto Profil">
+ */
 
         /* Contact Section */
         #contact .section-content {
@@ -563,6 +637,8 @@
                 <!-- Experience 1 -->
                 <div class="card">
                     <h3>Chairperson</h3>
+                     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                     <img src="chairperson.jpg" class="gallery-image" alt="Deskripsi gambar 1">
                     <p>Pewaris Bangsa Fair 2025 Event</p>
                     <p>July 2025</p>
                     <ul>
@@ -585,8 +661,16 @@
                 <!-- Experience 3 -->
                 <div class="card">
                     <h3>Extras</h3>
+                        <div class="video-section">
+                                    <div class="video-container">
+                                <video controls>
+                                    <source src="believe.mp4" type="video/mp4">
+                    </video>
+                        <h2>Belive Movies (2025)</h2>
+                </div>
+    </div>
                     <p>Commercial Movies</p>
-                    <p>December 2023 - March 2024</p>
+                    <p>December 2023 - July 2025</p>
                     <ul>
                         <li>Responsible for creating the atmosphere in a scene and making it look natural.</li>
                         <li>Achievement: natural-looking acting that builds the atmosphere of a scene and has been involved in many movies.</li>
