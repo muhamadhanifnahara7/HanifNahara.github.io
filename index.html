@@ -825,7 +825,7 @@
             loadingSpinner.classList.remove('hidden'); // Show loading spinner
 
             let chatHistory = [];
-            const prompt = `Please refine the following self-description for a professional portfolio website. Make it more concise, impactful, and highlight key strengths. Here anlyze the text section of HTML program: "${currentAboutMe}"`;
+            const prompt = `Please refine the following self-description for a professional portfolio website. Make it more concise, impactful, and highlight key strengths. Here anlyze text from HTML program must have output text only. Here the negative prompt Negative : Don not put any HTML code just text only and missing information: "${currentAboutMe}"`;
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
             const payload = { contents: chatHistory };
