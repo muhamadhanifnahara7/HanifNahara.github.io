@@ -272,20 +272,21 @@
             color: #555;
         }
 
-        /* Video section styling */
-        #video-project .video-container {
+        /* Video and Image within Cards Styling */
+        .card .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
-            margin-top: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 15px; /* Adjust margin for within card */
+            margin-bottom: 15px; /* Adjust margin for within card */
+            border-radius: 10px; /* Match card radius or slightly smaller */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
 
-        #video-project .video-container iframe,
-        #video-project .video-container video {
+        .card .video-container iframe,
+        .card .video-container video {
             position: absolute;
             top: 0;
             left: 0;
@@ -293,59 +294,22 @@
             height: 100%;
             border: none;
         }
-        .portfolio-image {
+
+        .card .portfolio-image {
             width: 100%;
-            max-width: 600px; /* Batasi lebar maksimum agar tidak terlalu besar */
             height: auto;
-            display: block; /* Menghapus spasi ekstra di bawah gambar */
-            margin: 0 auto; /* Tengah-tengah gambar di dalam container */
-            border-radius: 10px; /* Sudut membulat */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi halus untuk efek hover */
-        }
-
-/*
- * Efek Hover untuk Gambar Portofolio
- * Gambar akan membesar sedikit dan bayangan akan menjadi lebih jelas saat kursor diarahkan.
- */
-        .portfolio-image:hover {
-            transform: scale(1.02); /* Memperbesar gambar 2% */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas */
-        }
-
-/*
- * Gaya untuk Galeri Gambar
- * Untuk tampilan seperti galeri dengan beberapa gambar dalam satu baris.
- */
-        .gallery-image {
-            width: 100%;
-            height: 250px; /* Tinggi tetap untuk tampilan seragam */
-            object-fit: cover; /* Memastikan gambar memenuhi ruang tanpa terdistorsi */
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin: 15px auto; /* Adjust margin for within card */
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .gallery-image:hover {
-            transform: translateY(-5px); /* Menggeser gambar sedikit ke atas saat dihover */
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        .card .portfolio-image:hover {
+            transform: scale(1.01); /* Slightly less zoom for cards */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
-/*
- * Contoh Penggunaan
- * Berikut adalah contoh HTML untuk menerapkan gaya di atas:
- *
- * <img src="path/to/your-image.jpg" class="portfolio-image" alt="Deskripsi gambar">
- *
- * <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
- * <img src="path/to/image1.jpg" class="gallery-image" alt="Deskripsi gambar 1">
- * <img src="path/to/image2.jpg" class="gallery-image" alt="Deskripsi gambar 2">
- * <img src="path/to/image3.jpg" class="gallery-image" alt="Deskripsi gambar 3">
- * </div>
- *
- * <img src="path/to/profile.jpg" class="profile-image-circle" alt="Foto Profil">
- */
-
         /* Contact Section */
         #contact .section-content {
             text-align: center;
@@ -606,7 +570,7 @@
         </div>
     </section>
 
-    <!-- About Me -->
+ <!-- About Me -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -634,11 +598,14 @@
         <div class="container">
             <h2>Work Experience</h2>
             <div class="grid-container">
-                <!-- Experience 1 -->
+                <!-- Experience 1 - Chairperson -->
                 <div class="card">
                     <h3>Chairperson</h3>
                     <p>Pewaris Bangsa Fair 2025 Event</p>
                     <p>July 2025</p>
+                    <div class="portfolio-image-container">
+                        <img src="chairperson.jpg" class="portfolio-image" alt="Chairperson Event Image">
+                    </div>
                     <ul>
                         <li>Responsible for coordinating with the Logistics, Decoration, Finance, Secretariat, Program, Partnership, Consumption, and Creative departments.</li>
                         <li>Built strong collaboration across divisions, ensuring every department successfully completed tasks according to the timeline.</li>
@@ -656,11 +623,16 @@
                         <li>Enhanced talent in public speaking and communication.</li>
                     </ul>
                 </div>
-                <!-- Experience 3 -->
+                <!-- Experience 3 - Extras (with video) -->
                 <div class="card">
                     <h3>Extras</h3>
                     <p>Commercial Movies</p>
                     <p>December 2023 - July 2025</p>
+                    <div class="video-container">
+                        <video controls playsinline>
+                            <video controls playsinline style="max-width: 100%; max-height: 100%;"><source src="https://pixeldrain.com/api/file/EfHVPmi9" type="video/mp4" /></video>
+                        </video>
+                    </div>
                     <ul>
                         <li>Responsible for creating the atmosphere in a scene and making it look natural.</li>
                         <li>Achievement: natural-looking acting that builds the atmosphere of a scene and has been involved in many movies.</li>
@@ -845,8 +817,12 @@
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
             const payload = { contents: chatHistory };
-            const apiKey = "AIzaSyA5tXDbwb8ILhivY2eurBJYDI21R1Vvt3c";
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+            // IMPORTANT: For GitHub Pages, you MUST use a secure backend proxy to handle your API key.
+            // Do NOT hardcode your API key directly in client-side code for public hosting.
+            // For Canvas environment, leave apiKey as "" to let Canvas inject it automatically.
+            const apiKey = "AIzaSyA5tXDbwb8ILhivY2eurBJYDI21R1Vvt3c"; // Your API Key
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
 
             // Exponential backoff retry logic
             const maxRetries = 5;
