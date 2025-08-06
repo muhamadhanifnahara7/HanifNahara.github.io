@@ -526,7 +526,7 @@
         <div class="hero-content">
             <img src="image.jpg" alt="Muhammad Hanif Nahara Profile Picture" class="profile-img">
             <h1>Hello, I'm Muhammad Hanif Nahara</h1>
-            <p>A fresh graduate with expertise in **Business Intelligence and Creative Content**.</p>
+            <p>A fresh graduate with expertise in Business Intelligence and Creative Content.</p>
             <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
@@ -540,7 +540,7 @@
                     I am a fresh graduate from Pewaris Bangsa Homeschooling Community, specializing in the Natural Sciences program. I have gained valuable experience and achievements, including winning international photography awards, internship experience, and active participation in organizations.
                 </p>
                 <p>
-                    I am highly interested in **business management** and aspire to pursue a master's degree in this field. My homeschooling environment has fostered strong self-discipline, time management, and independent learning skills.
+                    I am highly interested in business management and aspire to pursue a master's degree in this field. My homeschooling environment has fostered strong self-discipline, time management, and independent learning skills.
                 </p>
                 <p>
                     I believe that the combination of a strong academic background, practical experience, and a high spirit of learning makes me an individual ready to contribute to a professional environment.
@@ -699,134 +699,4 @@
         <div class="container">
             <p>&copy; 2025 Muhammad Hanif Nahara. All Rights Reserved.</p>
         </div>
-    </footer>
-
-    <script>
-        function toggleMobileMenu() {
-            const mobileNav = document.getElementById('mobile-nav');
-            const overlay = document.getElementById('overlay');
-            mobileNav.classList.toggle('active');
-            overlay.classList.toggle('active');
-            if (mobileNav.classList.contains('active')) {
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-            } else {
-                document.body.style.overflow = '';
-            }
-        }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a, .mobile-nav a, .btn').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const href = this.getAttribute('href');
-                // Only apply smooth scrolling if href exists and starts with '#'
-                if (href && href.startsWith('#')) {
-                    e.preventDefault();
-                    const targetElement = document.querySelector(href);
-                    if (targetElement) {
-                        const headerOffset = document.querySelector('header').offsetHeight; // Get header height
-                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                        const offsetPosition = elementPosition - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                    // Close mobile menu if open
-                    if (document.getElementById('mobile-nav').classList.contains('active')) {
-                        toggleMobileMenu();
-                    }
-                }
-            });
-        });
-
-        // Add 'active' class to overlay when mobile-nav is active
-        const mobileNav = document.getElementById('mobile-nav');
-        const overlay = document.getElementById('overlay');
-        const observer = new MutationObserver(() => {
-            if (mobileNav.classList.contains('active')) {
-                overlay.style.display = 'block';
-            } else {
-                overlay.style.display = 'none';
-            }
-        });
-        observer.observe(mobileNav, { attributes: true, attributeFilter: ['class'] });
-
-        // Gemini API Integration
-        async function analyzeProfile() {
-            const aboutMeTextElement = document.getElementById('about-me-text');
-            const aiResultDiv = document.getElementById('ai-analysis-result');
-            const aiResultText = document.getElementById('ai-result-text');
-            const loadingSpinner = document.getElementById('loading-spinner');
-
-            const currentAboutMe = aboutMeTextElement.innerText;
-
-            aiResultDiv.style.display = 'none'; // Hide previous result
-            aiResultText.innerText = ''; // Clear previous text
-            loadingSpinner.classList.remove('hidden'); // Show loading spinner
-
-            let chatHistory = [];
-            const prompt = `Please refine the following self-description for a professional portfolio website. Make it more concise, impactful, and highlight key strengths. Focus on making it suitable for a business management or data analysis role. Here is the text: "${currentAboutMe}"`;
-            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
-
-            const payload = { contents: chatHistory };
-            const apiKey = ""; // Leave as-is, Canvas will provide it
-            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
-            // Exponential backoff retry logic
-            const maxRetries = 5;
-            let retryCount = 0;
-            let response;
-
-            while (retryCount < maxRetries) {
-                try {
-                    response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (response.status === 429) { // Too Many Requests
-                        const delay = Math.pow(2, retryCount) * 1000 + Math.random() * 1000; // Exponential backoff with jitter
-                        console.warn(`Rate limit hit. Retrying in ${delay / 1000} seconds...`);
-                        await new Promise(resolve => setTimeout(resolve, delay));
-                        retryCount++;
-                        continue;
-                    }
-
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-
-                    const result = await response.json();
-
-                    if (result.candidates && result.candidates.length > 0 &&
-                        result.candidates[0].content && result.candidates[0].content.parts &&
-                        result.candidates[0].content.parts.length > 0) {
-                        const text = result.candidates[0].content.parts[0].text;
-                        aiResultText.innerText = text;
-                        aiResultDiv.style.display = 'block';
-                    } else {
-                        aiResultText.innerText = 'Failed to get a valid response from AI. Please try again.';
-                        aiResultDiv.style.display = 'block';
-                    }
-                    break; // Exit loop on success
-                } catch (error) {
-                    console.error('Error calling Gemini API:', error);
-                    aiResultText.innerText = `An error occurred: ${error.message}. Please try again.`;
-                    aiResultDiv.style.display = 'block';
-                    break; // Exit loop on unrecoverable error
-                } finally {
-                    loadingSpinner.classList.add('hidden'); // Hide loading spinner
-                }
-            }
-
-            if (retryCount === maxRetries) {
-                aiResultText.innerText = 'Failed to get a response after multiple retries. Please try again later.';
-                aiResultDiv.style.display = 'block';
-                loadingSpinner.classList.add('hidden');
-            }
-        }
-    </script>
-</body>
-</html>
+    </footer
