@@ -591,7 +591,7 @@
             <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
-
+<div id="about-hanif" class"about-myself">
 <section id="about">
         <div class="container">
             <h2>About Me</h2>
@@ -768,7 +768,7 @@
             <p>&copy; 2025 Muhammad Hanif Nahara. All Rights Reserved.</p>
         </div>
     </footer>
-    
+</div>
     <script src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
 
     <script>
@@ -813,7 +813,7 @@
 
         // Gemini API Integration
         async function analyzeProfile() {
-            const aboutMeTextElement = document.getElementById('about-me-text');
+            const aboutMeTextElement = document.getElementById('about-hanif');
             const aiResultDiv = document.getElementById('ai-analysis-result');
             const aiResultText = document.getElementById('ai-result-text');
             const loadingSpinner = document.getElementById('loading-spinner');
@@ -825,7 +825,7 @@
             loadingSpinner.classList.remove('hidden'); // Show loading spinner
 
             let chatHistory = [];
-            const prompt = `Please refine the following self-description for a professional portfolio website. Make it more concise, impactful, and highlight key strengths. Focus on making it suitable for a business management or data analysis role. Here is the text: "${currentAboutMe}"`;
+            const prompt = `Please refine the following self-description for a professional portfolio website. Make it more concise, impactful, and highlight key strengths. Here anlyze the text section of HTML program: "${currentAboutMe}"`;
             chatHistory.push({ role: "user", parts: [{ text: prompt }] });
 
             const payload = { contents: chatHistory };
