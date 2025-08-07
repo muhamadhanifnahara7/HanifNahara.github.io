@@ -62,10 +62,6 @@
                     const apiKey = "AIzaSyA5tXDbwb8ILhivY2eurBJYDI21R1Vvt3c";
                     // =================================================================
 
-                    if (apiKey === "PASTE_YOUR_GOOGLE_AI_API_KEY_HERE") {
-                        throw new Error("Please replace the placeholder API Key with your real key from Google AI Studio.");
-                    }
-
                     const currentAboutMe = aboutMeTextElement.innerText;
                     const prompt = `Rewrite and refine the following professional self-description for a portfolio website. Make it concise, impactful, and suitable for a business or creative role. Ensure the output is text only, without any HTML code or formatting. The text to analyze is: "${currentAboutMe}"`;
                     
