@@ -1,0 +1,329 @@
+/* =================================================================
+   NEW, REWRITTEN AND EDITABLE CSS
+   - Uses CSS Variables for easy theme changes.
+   - Organized into logical sections.
+   ================================================================= */
+
+/* ===== Root Variables (Your Website's Control Panel) ===== */
+:root {
+    /* -- COLORS -- */
+    --primary-color: #3498db;     /* Main blue for links, highlights */
+    --secondary-color: #2c3e50;   /* Dark blue-gray for titles, footer */
+    --accent-color: #2ecc71;      /* Green for success icons */
+    --bg-light: #f4f7f6;          /* Main light background */
+    --bg-white: #fff;             /* White for cards and header */
+    --text-dark: #333;            /* Primary text color */
+    --text-medium: #555;          /* Lighter text for paragraphs */
+    --text-subtle: #777;          /* Even lighter text */
+    --gradient-start: var(--primary-color);
+    --gradient-end: var(--secondary-color);
+    
+    /* -- TYPOGRAPHY -- */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+
+    /* -- SIZING & SPACING -- */
+    --header-height: 85px;
+    --border-radius: 15px;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.08);
+    --shadow-strong: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== General Resets & Body Styles ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height); /* Ensures sections land below the fixed header */
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ===== Layout (Header, Footer, Container) ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+header {
+    background-color: var(--bg-white);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--bg-white);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 15px;
+}
+
+/* ===== Generic Section & Title Styles ===== */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: var(--bg-white);
+}
+
+.section-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+h2 {
+    font-size: 42px;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+    border-radius: 2px;
+}
+
+/* ===== Component Styles (Buttons, Cards, etc.) ===== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-white);
+    color: var(--primary-color);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    color: #888;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.card {
+    background-color: var(--bg-white);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.card h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-subtle);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: var(--text-medium);
+    font-size: 17px;
+}
+
+.card ul li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 2px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.skill-item {
+    background-color: #eaf6ff;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===== Section-Specific Styles ===== */
+#hero {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: var(--bg-white);
+    padding: calc(var(--header-height) + 70px) 20px 100px;
+    min-height: 100vh;
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255,255,255,0.2);
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+#hero h1 { font-size: 52px; margin-bottom: 15px; }
+#hero p { font-size: 22px; margin-bottom: 40px; opacity: 0.9; }
+
+.logo { font-family: var(--font-heading); }
+nav a { font-family: var(--font-heading); }
+
+#about p { color: var(--text-medium); }
+
+.card .portfolio-image, .card .video-container {
+    width: 100%;
+    margin: 15px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#contact ul li a { color: var(--primary-color); }
+#contact ul li a:hover { color: var(--secondary-color); }
+
+/* ===== Mobile Navigation ===== */
+.hamburger { display: none; font-size: 30px; color: var(--secondary-color); cursor: pointer; }
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-white);
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100%;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    padding-top: 80px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+}
+.mobile-nav.active { right: 0; }
+.mobile-nav ul { flex-direction: column; width: 100%; list-style: none; }
+.mobile-nav ul li { width: 100%; text-align: center; border-bottom: 1px solid #eee; }
+.mobile-nav ul li:last-child { border-bottom: none; }
+.mobile-nav ul li a { display: block; padding: 15px 20px; color: var(--text-medium); }
+.close-btn { position: absolute; top: 20px; right: 25px; font-size: 30px; color: var(--secondary-color); cursor: pointer; }
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+.overlay.active { display: block; }
+
+
+/* ===== Animations ===== */
+.loading-spinner {
+    border: 4px solid rgba(0,0,0,0.1);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+.hidden { display: none; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+/* ===== Responsive Media Queries ===== */
+@media (max-width: 768px) {
+    h2 { font-size: 34px; margin-bottom: 40px; }
+    section { padding: 60px 15px; }
+    .logo { font-size: 24px; }
+    nav { display: none; }
+    .hamburger { display: block; }
+    #hero h1 { font-size: 40px; }
+    #hero p { font-size: 18px; }
+    .btn { padding: 12px 25px; font-size: 16px; }
+    .card { padding: 25px; }
+    .card h3 { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+    #hero h1 { font-size: 32px; }
+    h2 { font-size: 28px; }
+    .profile-img { width: 150px; height: 150px; }
+    .grid-container { grid-template-columns: 1fr; }
+    .skills-list { justify-content: center; }
+}

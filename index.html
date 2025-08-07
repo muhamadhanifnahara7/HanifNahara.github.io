@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hanif Nahara - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://vjs.zencdn.net/8.23.3/video-js.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
+    <script src="script.js"></script>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Muhammad Hanif Nahara</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#experience">Work Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav" id="mobile-nav">
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <section id="hero">
+        <div class="hero-content">
+            <img src="image.jpg" alt="Muhammad Hanif Nahara Profile Picture" class="profile-img">
+            <h1>Hello, I'm Muhammad Hanif Nahara</h1>
+            <p>A fresh graduate with expertise in Business Intelligence and Creative Content.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="section-content">
+                <p id="about-me-text">
+                    I am a fresh graduate from Pewaris Bangsa Homeschooling Community, specializing in the Natural Sciences program. I have gained valuable experience and achievements, including winning international photography awards, internship experience, and active participation in organizations.
+                </p>
+                <p>
+                    I am highly interested in business management and aspire to pursue a master's degree in this field. My homeschooling environment has fostered strong self-discipline, time management, and independent learning skills.
+                </p>
+                <p>
+                    I believe that the combination of a strong academic background, practical experience, and a high spirit of learning makes me an individual ready to contribute to a professional environment.
+                </p>
+                <button id="analyze-btn" class="btn mt-8">
+                    <span id="analyze-btn-text">Analyze Profile with AI ✨</span>
+                    <span id="loading-spinner" class="loading-spinner hidden"></span>
+                </button>
+                <div id="ai-analysis-result" class="card mt-8" style="display: none;">
+                    <h3>AI Analysis Result</h3>
+                    <p id="ai-result-text"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Chairperson</h3>
+                    <p>Pewaris Bangsa Fair 2025 Event</p>
+                    <p>July 2025</p>
+                    <img src="chairperson.jpg" class="portfolio-image" alt="Chairperson Event Image">
+                    <ul>
+                        <li>Responsible for coordinating with the Logistics, Decoration, Finance, Secretariat, Program, Partnership, Consumption, and Creative departments.</li>
+                        <li>Built strong collaboration across divisions, ensuring every department successfully completed tasks according to the timeline.</li>
+                        <li>Improved skills in management and coordination.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Reporter</h3>
+                    <p>Pewaris Bangsa Homeschooling Community Exhibition</p>
+                    <p>July 2024</p>
+                    <ul>
+                        <li>Responsible for obtaining information about food stands and works from sources to be conveyed to the public via YouTube livestreaming.</li>
+                        <li>Maintained communication with sources to ensure continuous information provision.</li>
+                        <li>Enhanced talent in public speaking and communication.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Movie Actor</h3>
+                    <p>Commercial Movies</p>
+                    <p>December 2023 - July 2025</p>
+                    <div class="video-container">
+                        <video id="my-video" class="video-js" controls preload="auto" poster="poster.jpg" data-setup='{"fluid": true}'>
+                            <source src="believe.mp4" type="video/mp4" />
+                            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+                        </video>
+                    </div>
+                     <p class="video-caption">Believe Film (2025)</p>
+                    <ul>
+                        <li>Responsible for creating the atmosphere in a scene and making it look natural.</li>
+                        <li>Achievement: natural-looking acting that builds the atmosphere of a scene and has been involved in many movies.</li>
+                        <li>Improved talents in communication and acting.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Content Creator, Cameraman and Video Editor (Internship)</h3>
+                    <p>iBooming, Jakarta</p>
+                    <p>March 2023 - June 2023</p>
+                    <ul>
+                        <li>Collaborated with the team to create company promotional content that attracts and sells to TikTok viewers.</li>
+                        <li>Handled the shooting, directing, and editing of videos to match current trends.</li>
+                        <li>Achievement: increased affiliated influencers by about 15%, increased followers from 10 thousand to 15 thousand, and went viral on TikTok to 80 thousand viewers within 3 months.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Cameraman, Video Editor and Floor Director (Internship)</h3>
+                    <p>Bandung TV station, Bandung</p>
+                    <p>November 2022 – February 2023</p>
+                    <ul>
+                        <li>Responsible for recording and editing the content of various television programs as a Cameraman and Video Editor.</li>
+                        <li>Coordinated live broadcasts, including organizing artists and crew, to ensure everything ran smoothly on schedule as Floor Director.</li>
+                        <li>Achievement: raised the rating of Bandung TV to 4, resulting in 4 advertisements and sponsors.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Senior High School</h3>
+                    <p>Pewaris Bangsa Homeschooling Community</p>
+                    <p>July 2022 – May 2025</p>
+                    <ul>
+                        <li>Completed an accelerated program majoring in Natural Sciences (IPA).</li>
+                        <li>Achieved an average score of 87.59 out of 100.</li>
+                        <li>This homeschooling environment has fostered strong self-discipline, time management, and independent learning skills.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="section-content">
+                <div class="card">
+                    <h3>Professional Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Content Creation: Videography and Photography</span>
+                        <span class="skill-item">Video and Photo Editing: Adobe Photoshop, Adobe Premiere Pro, Capcut</span>
+                        <span class="skill-item">Graphic Design: Photoshop and Canva</span>
+                        <span class="skill-item">Programming: Python, HTML, CSS, JavaScript, SQL</span>
+                    </div>
+                </div>
+                <div class="card mt-8">
+                    <h3>Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Bahasa Indonesia: Native Proficiency</span>
+                        <span class="skill-item">English: CEFR B1</span>
+                        <span class="skill-item">German: Basic proficiency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio/Projects</h2>
+            <div class="section-content">
+                <p>Explore some of my best projects on Canva. Click the link below to view my work:</p>
+                <a href="https://www.canva.com/design/DAGvLPI-o1Q/bGkaCxvHpiVxFRo9XlKEIg/edit?utm_content=DAGvLPI-o1Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="btn">Visit My Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="section-content">
+                <p>Feel free to reach out to me using the information below:</p>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:muhammad.hanif.nahara@gmail.com">muhammad.hanif.nahara@gmail.com</a></li>
+                    <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/muhammad-hanif-nahara-5390bb27a/" target="_blank">Muhammad Hanif Nahara</a></li>
+                    <li><i class="fas fa-phone"></i> Phone: (+62)83138443934</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: MUARA KARANG BLOK C.I U/7, North Jakarta – Indonesia</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Muhammad Hanif Nahara. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
