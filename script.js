@@ -48,7 +48,7 @@
                 const loadingSpinner = document.getElementById('loading-spinner');
                 const aiResultDiv = document.getElementById('ai-analysis-result');
                 const aiResultText = document.getElementById('ai-result-text');
-                const aboutMeTextElement = document.getElementById('about-me-text');
+                const aboutMeTextElement = document.getElementById('about-hanif');
                 
                 analyzeButton.disabled = true; 
                 buttonText.textContent = 'Analyzing...';
