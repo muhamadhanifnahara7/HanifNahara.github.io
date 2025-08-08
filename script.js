@@ -63,7 +63,26 @@
                     // =================================================================
 
                     const currentAboutMe = aboutMeTextElement.innerText;
-                    const prompt = `Rewrite and refine the following professional self-description for a portfolio website. Make it concise, impactful, and suitable for a business or creative role. Ensure the output is text only, without any HTML code or formatting. The text to analyze is: "${currentAboutMe}"`;
+                    const prompt = `You are an expert career coach and copywriter. Your task is to rewrite and refine the following professional profile from a portfolio website.
+
+**Objective:**
+Create a concise, impactful, and compelling summary suitable for both business (e.g., Business Intelligence) and creative (e.g., Content Creation) roles. The rewritten text should grab the attention of recruiters and hiring managers.
+
+**Instructions:**
+1.  **Tone:** Adopt a professional, confident, and enthusiastic tone.
+2.  **Structure:**
+    *   Start with a powerful opening sentence that summarizes the candidate's core identity.
+    *   Weave together the key experiences and skills mentioned in the text, connecting the creative background (photography, videography, acting) with the business and analytical interests (Business Intelligence, management).
+    *   Highlight key achievements, such as winning awards, increasing social media engagement, and raising TV ratings.
+    *   Emphasize soft skills developed through homeschooling and organizational roles, like self-discipline, time management, and leadership.
+    *   Conclude with a strong, forward-looking statement about their career aspirations in business management.
+3.  **Formatting:**
+    *   The output must be plain text only.
+    *   Do not use any HTML, Markdown (like #, *, or lists), or other formatting.
+    *   The final text should be 3-4 paragraphs.
+
+**Profile Text to Analyze:**
+"${currentAboutMe}"`;
                     
                     const payload = { 
                         contents: [{ role: "user", parts: [{ text: prompt }] }] 
